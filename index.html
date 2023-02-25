@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love_Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Created by - Shital Karek </h2>
+    
+    <div class="container">
+        <div class="content">
+            <img src="https://apollohealthlib.blob.core.windows.net/health-library/2021/06/shutterstock_1236631984-scaled.jpg" alt="heart">
+            <h1> LOVE CALCULATOR </h1>
+            <center>
+            <div class="inputArea">
+                <input type="text" placeholder="Your Name" id="nameOne" onfocus="this.value =''">
+                
+                <input type="text" placeholder="Lover Name" id="nameTwo" onfocus="this.value =''">
+            </div>
+             </center>
+            <a href="#" onclick="love()">CALCULATE</a>
+            <p id="print"> your relationship result is here</p>
+            <p id="statement"></p>
+            
+        </div>
+        
+    </div>
+   
+    
+    <script>
+
+        function love(){
+
+            var name1 = document.getElementById("nameOne").value;
+        var name2 = document.getElementById("nameTwo").value;
+
+        if(name1.length<=2){
+            alert("enter at least 3 characters");
+
+        }
+        if(name2.length<=2){
+            alert("enter atleast 3 characters");
+        }
+        else{
+            var random = Math.floor(Math.random()*100);
+            document.getElementById("print").innerHTML= name1 +" " + "&"  + " " + name2 + " " +  "=" + " " + random + " " + "%" + " " +  "of love";
+        }
+        if(random <=10 || random <=50){
+            document.getElementById("statement").innerHTML= " good relationship ❤️";
+        }
+        else if (random<=51 || random<=100){
+            document.getElementById("statement").innerHTML="lovely relationship 💖";
+        }
+
+     }
+        
+
+    </script>
+
+   
+</body>
+</html>
